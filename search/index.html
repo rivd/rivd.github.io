@@ -1,0 +1,761 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.18.2"><meta name="color-scheme" content="light dark"><!-- Canonical URL --><link rel="canonical" href="https://rivd.github.io/search/"><!-- Primary Meta Tags --><title>Knowledge &amp; Discovery — Fabrice Rivart</title><meta name="title" content="Knowledge &#38; Discovery — Fabrice Rivart"><meta name="description" content="Explore all articles, architectural blueprints, leadership frameworks, and guided reading tracks across Engineering, Management, and Investment."><meta name="author" content="Fabrice Rivart"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://rivd.github.io/search/"><meta property="og:title" content="Knowledge &#38; Discovery — Fabrice Rivart"><meta property="og:description" content="Explore all articles, architectural blueprints, leadership frameworks, and guided reading tracks across Engineering, Management, and Investment."><meta property="og:image" content="https://rivd.github.io/images/og-default.svg"><meta property="og:site_name" content="Fabrice Rivart"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://rivd.github.io/search/"><meta property="twitter:title" content="Knowledge &#38; Discovery — Fabrice Rivart"><meta property="twitter:description" content="Explore all articles, architectural blueprints, leadership frameworks, and guided reading tracks across Engineering, Management, and Investment."><meta property="twitter:image" content="https://rivd.github.io/images/og-default.svg"><!-- RSS Feed and Sitemap links --><link rel="alternate" type="application/rss+xml" title="Fabrice Rivart RSS Feed" href="/rss.xml"><link rel="sitemap" href="/sitemap.xml"><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Fabrice Rivart","url":"https://rivd.github.io","description":"Explore all articles, architectural blueprints, leadership frameworks, and guided reading tracks across Engineering, Management, and Investment.","author":{"@type":"Person","name":"Fabrice Rivart"}}</script><!-- Prevent theme & accent flicker / FOUC --><script>
+      (function () {
+        // 1. Light/Dark mode
+        const storedTheme = localStorage.getItem('theme');
+        const isDark = storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+        // 2. Global custom accent color persistence
+        const savedPaletteJson = localStorage.getItem('site-accent-palette');
+        if (savedPaletteJson) {
+          try {
+            const palette = JSON.parse(savedPaletteJson);
+            const activeMode = isDark ? palette.dark : palette.light;
+            if (activeMode && activeMode.accent) {
+              document.documentElement.style.setProperty('--color-accent', activeMode.accent);
+              document.documentElement.style.setProperty('--color-accent-hover', activeMode.hover);
+              document.documentElement.style.setProperty('--color-accent-muted', activeMode.muted);
+            }
+          } catch (e) {}
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_slug_.CwIy2ydD.css"></head> <body class="bg-bg text-fg font-sans antialiased min-h-screen flex flex-col selection:bg-accent-muted selection:text-fg"> <header class="sticky top-0 z-30 w-full border-b border-border bg-bg/90 backdrop-blur-md transition-colors"> <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"> <!-- Brand / Logo --> <div class="flex items-center space-x-4"> <a href="/" class="group flex items-baseline space-x-2 text-fg hover:text-accent transition-colors"> <span class="font-serif text-xl font-bold tracking-tight">Fabrice Rivart</span> </a> </div> <!-- Desktop Navigation --> <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium" aria-label="Main Navigation"> <a href="/engineering/" class="px-3 py-1.5 rounded-md transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Engineering </a><a href="/management/" class="px-3 py-1.5 rounded-md transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Management </a><a href="/investment/" class="px-3 py-1.5 rounded-md transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Investment </a><a href="/paths/" class="px-3 py-1.5 rounded-md transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Paths </a><a href="/about/" class="px-3 py-1.5 rounded-md transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> About </a> </nav> <!-- Utilities (Search & Theme & Mobile Nav) --> <div class="flex items-center space-x-2 sm:space-x-3"> <!-- Search link / button --> <a href="/search/" class="inline-flex items-center space-x-2 px-2.5 py-1.5 text-sm text-fg-muted hover:text-fg hover:bg-bg-subtle rounded-md border border-border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Search articles" title="Search articles (Press / or ⌘K)"> <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.3-4.3"></path> </svg> <span class="hidden lg:inline text-xs font-mono text-fg-subtle bg-bg-muted px-1.5 py-0.5 rounded border border-border-muted">⌘K</span> </a> <!-- LinkedIn Profile Link --> <a href="https://www.linkedin.com/in/frivart/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center p-2 text-fg-muted hover:text-fg hover:bg-bg-subtle rounded-md border border-border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="LinkedIn Profile" title="LinkedIn Profile"> <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"> <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"></path> </svg> </a> <!-- Accent Palette Switcher --> <div class="relative inline-block text-left" id="accent-picker-container"> <!-- Minimalist Accent Trigger Button --> <button type="button" id="accent-picker-btn" class="inline-flex items-center space-x-1 p-2 text-fg-muted hover:text-fg hover:bg-bg-subtle rounded-md border border-border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Change reading accent tone" title="Change reading accent tone" aria-expanded="false" aria-haspopup="true"> <span class="w-3.5 h-3.5 rounded-full border border-black/20 dark:border-white/20 transition-colors flex-shrink-0" style="background-color: var(--color-accent);"></span> <svg class="w-3 h-3 text-fg-subtle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"> <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path> </svg> </button> <!-- Accent Dropdown Menu --> <div id="accent-picker-dropdown" class="hidden absolute right-0 mt-2 w-56 origin-top-right rounded-xl bg-bg-surface border border-border shadow-xl p-2.5 z-50 space-y-1 animate-in fade-in zoom-in-95 duration-100" role="menu" aria-orientation="vertical"> <div class="flex items-center justify-between px-2 py-1 text-[10px] font-mono font-bold uppercase tracking-wider text-fg-subtle border-b border-border-muted mb-1"> <span>Theme (Light / Dark)</span> </div> <div class="space-y-0.5" role="none"> <button type="button" class="accent-menu-item w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left text-xs font-serif font-medium text-fg hover:bg-bg-muted transition-colors group" data-palette-id="amber-gold" data-name="Amber / Gold" data-palette-json="{&#34;id&#34;:&#34;amber-gold&#34;,&#34;name&#34;:&#34;Amber / Gold&#34;,&#34;lightName&#34;:&#34;Amber&#34;,&#34;darkName&#34;:&#34;Gold&#34;,&#34;light&#34;:{&#34;accent&#34;:&#34;#B45309&#34;,&#34;hover&#34;:&#34;#92400E&#34;,&#34;muted&#34;:&#34;rgba(180, 83, 9, 0.12)&#34;},&#34;dark&#34;:{&#34;accent&#34;:&#34;#FBBF24&#34;,&#34;hover&#34;:&#34;#FCD34D&#34;,&#34;muted&#34;:&#34;rgba(251, 191, 36, 0.16)&#34;}}" role="menuitem"> <div class="flex items-center space-x-2.5"> <!-- Dual Swatches: Light Mode dot + Dark Mode dot --> <div class="flex items-center -space-x-1 flex-shrink-0"> <span class="w-3.5 h-3.5 rounded-full border border-black/10 z-10" style="background-color: #B45309;" title="Light: Amber"></span> <span class="w-3.5 h-3.5 rounded-full border border-white/20" style="background-color: #FBBF24;" title="Dark: Gold"></span> </div> <span class="group-hover:text-accent transition-colors font-medium"> Amber / Gold </span> </div> <span class="accent-check-icon hidden text-accent text-xs font-mono font-bold ml-1">✓</span> </button><button type="button" class="accent-menu-item w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left text-xs font-serif font-medium text-fg hover:bg-bg-muted transition-colors group" data-palette-id="olive-lime" data-name="Olive / Lime" data-palette-json="{&#34;id&#34;:&#34;olive-lime&#34;,&#34;name&#34;:&#34;Olive / Lime&#34;,&#34;lightName&#34;:&#34;Olive&#34;,&#34;darkName&#34;:&#34;Lime&#34;,&#34;light&#34;:{&#34;accent&#34;:&#34;#4D7C0F&#34;,&#34;hover&#34;:&#34;#3F6212&#34;,&#34;muted&#34;:&#34;rgba(77, 124, 15, 0.12)&#34;},&#34;dark&#34;:{&#34;accent&#34;:&#34;#A3E635&#34;,&#34;hover&#34;:&#34;#BEF264&#34;,&#34;muted&#34;:&#34;rgba(163, 230, 53, 0.16)&#34;}}" role="menuitem"> <div class="flex items-center space-x-2.5"> <!-- Dual Swatches: Light Mode dot + Dark Mode dot --> <div class="flex items-center -space-x-1 flex-shrink-0"> <span class="w-3.5 h-3.5 rounded-full border border-black/10 z-10" style="background-color: #4D7C0F;" title="Light: Olive"></span> <span class="w-3.5 h-3.5 rounded-full border border-white/20" style="background-color: #A3E635;" title="Dark: Lime"></span> </div> <span class="group-hover:text-accent transition-colors font-medium"> Olive / Lime </span> </div> <span class="accent-check-icon hidden text-accent text-xs font-mono font-bold ml-1">✓</span> </button><button type="button" class="accent-menu-item w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left text-xs font-serif font-medium text-fg hover:bg-bg-muted transition-colors group" data-palette-id="teal-mint" data-name="Teal / Mint" data-palette-json="{&#34;id&#34;:&#34;teal-mint&#34;,&#34;name&#34;:&#34;Teal / Mint&#34;,&#34;lightName&#34;:&#34;Teal&#34;,&#34;darkName&#34;:&#34;Mint&#34;,&#34;light&#34;:{&#34;accent&#34;:&#34;#0D9488&#34;,&#34;hover&#34;:&#34;#0F766E&#34;,&#34;muted&#34;:&#34;rgba(13, 148, 136, 0.12)&#34;},&#34;dark&#34;:{&#34;accent&#34;:&#34;#2DD4BF&#34;,&#34;hover&#34;:&#34;#5EEAD4&#34;,&#34;muted&#34;:&#34;rgba(45, 212, 191, 0.15)&#34;}}" role="menuitem"> <div class="flex items-center space-x-2.5"> <!-- Dual Swatches: Light Mode dot + Dark Mode dot --> <div class="flex items-center -space-x-1 flex-shrink-0"> <span class="w-3.5 h-3.5 rounded-full border border-black/10 z-10" style="background-color: #0D9488;" title="Light: Teal"></span> <span class="w-3.5 h-3.5 rounded-full border border-white/20" style="background-color: #2DD4BF;" title="Dark: Mint"></span> </div> <span class="group-hover:text-accent transition-colors font-medium"> Teal / Mint </span> </div> <span class="accent-check-icon hidden text-accent text-xs font-mono font-bold ml-1">✓</span> </button><button type="button" class="accent-menu-item w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left text-xs font-serif font-medium text-fg hover:bg-bg-muted transition-colors group" data-palette-id="cobalt-azure" data-name="Cobalt / Azure" data-palette-json="{&#34;id&#34;:&#34;cobalt-azure&#34;,&#34;name&#34;:&#34;Cobalt / Azure&#34;,&#34;lightName&#34;:&#34;Cobalt&#34;,&#34;darkName&#34;:&#34;Azure&#34;,&#34;light&#34;:{&#34;accent&#34;:&#34;#0055FF&#34;,&#34;hover&#34;:&#34;#0040CC&#34;,&#34;muted&#34;:&#34;rgba(0, 85, 255, 0.10)&#34;},&#34;dark&#34;:{&#34;accent&#34;:&#34;#3894FF&#34;,&#34;hover&#34;:&#34;#60A5FA&#34;,&#34;muted&#34;:&#34;rgba(56, 148, 255, 0.16)&#34;}}" role="menuitem"> <div class="flex items-center space-x-2.5"> <!-- Dual Swatches: Light Mode dot + Dark Mode dot --> <div class="flex items-center -space-x-1 flex-shrink-0"> <span class="w-3.5 h-3.5 rounded-full border border-black/10 z-10" style="background-color: #0055FF;" title="Light: Cobalt"></span> <span class="w-3.5 h-3.5 rounded-full border border-white/20" style="background-color: #3894FF;" title="Dark: Azure"></span> </div> <span class="group-hover:text-accent transition-colors font-medium"> Cobalt / Azure </span> </div> <span class="accent-check-icon hidden text-accent text-xs font-mono font-bold ml-1">✓</span> </button><button type="button" class="accent-menu-item w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left text-xs font-serif font-medium text-fg hover:bg-bg-muted transition-colors group" data-palette-id="violet-lavender" data-name="Violet / Lavender" data-palette-json="{&#34;id&#34;:&#34;violet-lavender&#34;,&#34;name&#34;:&#34;Violet / Lavender&#34;,&#34;lightName&#34;:&#34;Violet&#34;,&#34;darkName&#34;:&#34;Lavender&#34;,&#34;light&#34;:{&#34;accent&#34;:&#34;#7C3AED&#34;,&#34;hover&#34;:&#34;#6D28D9&#34;,&#34;muted&#34;:&#34;rgba(124, 58, 237, 0.12)&#34;},&#34;dark&#34;:{&#34;accent&#34;:&#34;#A78BFA&#34;,&#34;hover&#34;:&#34;#C4B5FD&#34;,&#34;muted&#34;:&#34;rgba(167, 139, 250, 0.15)&#34;}}" role="menuitem"> <div class="flex items-center space-x-2.5"> <!-- Dual Swatches: Light Mode dot + Dark Mode dot --> <div class="flex items-center -space-x-1 flex-shrink-0"> <span class="w-3.5 h-3.5 rounded-full border border-black/10 z-10" style="background-color: #7C3AED;" title="Light: Violet"></span> <span class="w-3.5 h-3.5 rounded-full border border-white/20" style="background-color: #A78BFA;" title="Dark: Lavender"></span> </div> <span class="group-hover:text-accent transition-colors font-medium"> Violet / Lavender </span> </div> <span class="accent-check-icon hidden text-accent text-xs font-mono font-bold ml-1">✓</span> </button><button type="button" class="accent-menu-item w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left text-xs font-serif font-medium text-fg hover:bg-bg-muted transition-colors group" data-palette-id="terracotta-coral" data-name="Terracotta / Coral" data-palette-json="{&#34;id&#34;:&#34;terracotta-coral&#34;,&#34;name&#34;:&#34;Terracotta / Coral&#34;,&#34;lightName&#34;:&#34;Terracotta&#34;,&#34;darkName&#34;:&#34;Coral&#34;,&#34;light&#34;:{&#34;accent&#34;:&#34;#E11D48&#34;,&#34;hover&#34;:&#34;#BE123C&#34;,&#34;muted&#34;:&#34;rgba(225, 29, 72, 0.12)&#34;},&#34;dark&#34;:{&#34;accent&#34;:&#34;#FB7185&#34;,&#34;hover&#34;:&#34;#FDA4AF&#34;,&#34;muted&#34;:&#34;rgba(251, 113, 133, 0.15)&#34;}}" role="menuitem"> <div class="flex items-center space-x-2.5"> <!-- Dual Swatches: Light Mode dot + Dark Mode dot --> <div class="flex items-center -space-x-1 flex-shrink-0"> <span class="w-3.5 h-3.5 rounded-full border border-black/10 z-10" style="background-color: #E11D48;" title="Light: Terracotta"></span> <span class="w-3.5 h-3.5 rounded-full border border-white/20" style="background-color: #FB7185;" title="Dark: Coral"></span> </div> <span class="group-hover:text-accent transition-colors font-medium"> Terracotta / Coral </span> </div> <span class="accent-check-icon hidden text-accent text-xs font-mono font-bold ml-1">✓</span> </button> </div> </div> </div> <script type="module">function m(){const i=document.getElementById("accent-picker-container"),o=document.getElementById("accent-picker-btn"),a=document.getElementById("accent-picker-dropdown"),l=document.querySelectorAll(".accent-menu-item");if(!o||!a)return;function d(e){const c=!a?.classList.contains("hidden");(e!==void 0?e:!c)?(a?.classList.remove("hidden"),o?.setAttribute("aria-expanded","true")):(a?.classList.add("hidden"),o?.setAttribute("aria-expanded","false"))}o.addEventListener("click",e=>{e.stopPropagation(),d()}),document.addEventListener("click",e=>{i&&!i.contains(e.target)&&d(!1)});function s(e){l.forEach(c=>{const t=c.getAttribute("data-palette-id"),r=c.querySelector(".accent-check-icon");t===e||t==="amber-gold"&&(e==="cyberpunk"||!e)?(c.classList.add("bg-bg-muted","font-bold"),r?.classList.remove("hidden")):(c.classList.remove("bg-bg-muted","font-bold"),r?.classList.add("hidden"))})}const u=localStorage.getItem("site-accent-palette");if(u)try{const e=JSON.parse(u);s(e.id)}catch{s("amber-gold")}else s("amber-gold");l.forEach(e=>{e.addEventListener("click",()=>{const c=e.getAttribute("data-palette-json");if(c)try{const t=JSON.parse(c);localStorage.setItem("site-accent-palette",JSON.stringify(t));const n=document.documentElement.getAttribute("data-theme")==="dark"?t.dark:t.light;n&&n.accent&&(document.documentElement.style.setProperty("--color-accent",n.accent),document.documentElement.style.setProperty("--color-accent-hover",n.hover),document.documentElement.style.setProperty("--color-accent-muted",n.muted)),s(t.id),d(!1)}catch(t){console.error("Failed to set global accent:",t)}})})}m();document.addEventListener("astro:after-swap",m);</script> <!-- Theme Switcher --> <button type="button" id="theme-toggle" class="relative inline-flex items-center justify-center p-2 text-fg-muted hover:text-fg hover:bg-bg-subtle rounded-md border border-border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Toggle theme" title="Toggle dark/light mode" data-astro-cid-x3pjskd3> <!-- Sun icon (shown in dark mode) --> <svg class="w-4 h-4 hidden dark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-x3pjskd3> <circle cx="12" cy="12" r="4" data-astro-cid-x3pjskd3></circle> <path d="M12 2v2" data-astro-cid-x3pjskd3></path> <path d="M12 20v2" data-astro-cid-x3pjskd3></path> <path d="m4.93 4.93 1.41 1.41" data-astro-cid-x3pjskd3></path> <path d="m17.66 17.66 1.41 1.41" data-astro-cid-x3pjskd3></path> <path d="M2 12h2" data-astro-cid-x3pjskd3></path> <path d="M20 12h2" data-astro-cid-x3pjskd3></path> <path d="m6.34 17.66-1.41 1.41" data-astro-cid-x3pjskd3></path> <path d="m19.07 4.93-1.41 1.41" data-astro-cid-x3pjskd3></path> </svg> <!-- Moon icon (shown in light mode) --> <svg class="w-4 h-4 light-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-x3pjskd3> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" data-astro-cid-x3pjskd3></path> </svg> </button>  <script type="module">function a(){const n=document.getElementById("theme-toggle");n&&n.addEventListener("click",()=>{const t=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",t),localStorage.setItem("theme",t);const o=localStorage.getItem("site-accent-palette");if(o)try{const c=JSON.parse(o),e=t==="dark"?c.dark:c.light;e&&e.accent&&(document.documentElement.style.setProperty("--color-accent",e.accent),document.documentElement.style.setProperty("--color-accent-hover",e.hover),document.documentElement.style.setProperty("--color-accent-muted",e.muted))}catch{}})}a();document.addEventListener("astro:after-swap",a);</script> <!-- Mobile Navigation Drawer --> <div class="md:hidden"> <!-- Mobile Menu Button --> <button id="mobile-menu-btn" type="button" class="p-2 text-fg-muted hover:text-fg hover:bg-bg-subtle rounded-md border border-border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"> <svg id="hamburger-icon" class="w-5 h-5 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <svg id="close-icon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> <!-- Mobile Dropdown / Modal Overlay --> <div id="mobile-menu" class="hidden fixed inset-x-0 top-16 bg-bg-surface border-b border-border shadow-lg px-6 py-6 z-40" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu"> <nav class="flex flex-col space-y-2"> <a href="/engineering/" class="px-3 py-2.5 rounded-md text-base font-medium transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Engineering </a><a href="/management/" class="px-3 py-2.5 rounded-md text-base font-medium transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Management </a><a href="/investment/" class="px-3 py-2.5 rounded-md text-base font-medium transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Investment </a><a href="/paths/" class="px-3 py-2.5 rounded-md text-base font-medium transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> Reading Paths </a><a href="/tags/" class="px-3 py-2.5 rounded-md text-base font-medium transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> All Topics &amp; Tags </a><a href="/search/" class="px-3 py-2.5 rounded-md text-base font-medium transition-colors text-fg font-semibold bg-bg-muted"> Search </a><a href="/about/" class="px-3 py-2.5 rounded-md text-base font-medium transition-colors text-fg-muted hover:text-fg hover:bg-bg-subtle"> About </a> <div class="pt-4 mt-2 border-t border-border flex items-center space-x-3"> <a href="https://www.linkedin.com/in/frivart/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-3 py-2.5 text-sm text-fg-muted hover:text-fg hover:bg-bg-muted rounded-md border border-border flex-1 justify-center transition-colors" aria-label="LinkedIn Profile"> <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"> <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"></path> </svg> <span class="text-xs font-mono font-medium">LinkedIn Profile</span> </a> </div> </nav> </div> </div> <script type="module">function i(){const e=document.getElementById("mobile-menu-btn"),t=document.getElementById("mobile-menu"),n=document.getElementById("hamburger-icon"),d=document.getElementById("close-icon");!e||!t||!n||!d||(e.addEventListener("click",()=>{const s=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",String(!s)),t.classList.toggle("hidden"),n.classList.toggle("hidden"),d.classList.toggle("hidden")}),t.querySelectorAll("a").forEach(s=>{s.addEventListener("click",()=>{e.setAttribute("aria-expanded","false"),t.classList.add("hidden"),n.classList.remove("hidden"),d.classList.add("hidden")})}))}i();document.addEventListener("astro:after-swap",i);</script> </div> </div> </header> <script type="module">document.addEventListener("keydown",e=>{(e.key==="k"&&(e.metaKey||e.ctrlKey)||e.key==="/"&&document.activeElement?.tagName!=="INPUT"&&document.activeElement?.tagName!=="TEXTAREA")&&(e.preventDefault(),window.location.href="/search/")});</script> <main class="flex-1 w-full">  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 space-y-6"> <!-- Compact Header with Breadcrumbs & Title --> <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border pb-4"> <div class="space-y-1"> <nav aria-label="Breadcrumb" class="flex items-center text-xs font-mono text-fg-subtle mb-6 overflow-x-auto whitespace-nowrap"> <ol class="flex items-center space-x-2"> <li> <a href="/" class="hover:text-accent transition-colors">Home</a> </li> <li class="flex items-center space-x-2"> <span class="text-border">/</span> <span class="text-fg-muted font-medium" aria-current="page"> Knowledge &amp; Discovery </span> </li> </ol> </nav> <h1 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-fg">
+Knowledge &amp; Article Discovery
+</h1> </div> <!-- Quick Type Segmented Switcher (Articles vs Guided Paths) --> <div class="inline-flex p-1 bg-bg-surface border border-border rounded-xl shadow-sm self-start sm:self-auto" id="mode-toggle-group"> <button type="button" id="mode-articles-btn" class="mode-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-accent text-white dark:text-zinc-950 shadow-sm flex items-center space-x-1.5" data-mode="articles"> <span>📄 Articles</span> <span class="text-[10px] bg-black/20 dark:bg-white/20 px-1.5 py-0.2 rounded-full">8</span> </button> <button type="button" id="mode-paths-btn" class="mode-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium text-fg-muted hover:text-fg transition-all flex items-center space-x-1.5" data-mode="paths"> <span>🗺️ Guided Paths</span> <span class="text-[10px] bg-bg-muted px-1.5 py-0.2 rounded-full text-fg-subtle">3</span> </button> </div> </div> <!-- ============================================== --> <!-- STICKY COMPACT CONTROL DECK --> <!-- ============================================== --> <div id="sticky-control-deck" class="sticky top-16 z-20 bg-bg/95 backdrop-blur-md border border-border rounded-xl p-3 sm:p-3.5 shadow-md transition-all space-y-2.5"> <!-- Row 1: Search Box & Pillar Filter Pills --> <div class="flex flex-col md:flex-row md:items-center justify-between gap-2.5"> <!-- Search Input --> <div class="relative flex-1 min-w-[240px]"> <input type="search" id="search-input" placeholder="Search keywords, systems, tracks... (/)" class="w-full pl-9 pr-8 py-2 bg-bg-surface border border-border rounded-lg text-fg placeholder:text-fg-subtle text-xs sm:text-sm font-sans focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent transition-all" autocomplete="off"> <svg class="w-4 h-4 absolute left-3 top-2.5 text-fg-subtle pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> <button type="button" id="clear-search-btn" class="hidden absolute right-2.5 top-2 text-xs font-mono text-fg-subtle hover:text-fg p-0.5" title="Clear search">
+✕
+</button> </div> <!-- Pillar Filter Buttons --> <div class="flex items-center space-x-1.5 overflow-x-auto no-scrollbar py-0.5 flex-shrink-0" id="category-pills-container"> <button type="button" class="category-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium transition-all bg-accent text-white dark:text-zinc-950 shadow-sm whitespace-nowrap" data-category="all">
+All <span id="cat-count-all">(8)</span> </button> <button type="button" class="category-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium text-fg-muted hover:text-fg bg-bg-surface hover:bg-bg-muted border border-border transition-all whitespace-nowrap" data-category="engineering">
+Engineering <span id="cat-count-eng">(3)</span> </button> <button type="button" class="category-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium text-fg-muted hover:text-fg bg-bg-surface hover:bg-bg-muted border border-border transition-all whitespace-nowrap" data-category="management">
+Management <span id="cat-count-mgmt">(3)</span> </button> <button type="button" class="category-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium text-fg-muted hover:text-fg bg-bg-surface hover:bg-bg-muted border border-border transition-all whitespace-nowrap" data-category="investment">
+Investment <span id="cat-count-inv">(2)</span> </button> </div> </div> <!-- Row 2: Secondary Controls (Multi-Tag Selector, Active Tags Chips, Sorter, View Switcher) --> <div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-border-muted text-xs font-mono"> <!-- Left: Multi-Tag Selector Dropdown & Active Filter Chips --> <div class="flex items-center space-x-2 flex-wrap gap-y-1.5 flex-1"> <!-- Tags Dropdown Trigger (Multi-Select Union for both Articles & Paths) --> <div class="relative inline-block text-left" id="tags-dropdown-container"> <button type="button" id="tags-dropdown-btn" class="inline-flex items-center space-x-1.5 px-2.5 py-1 bg-bg-surface hover:bg-bg-muted text-fg rounded-md border border-border transition-colors text-xs shadow-2xs"> <span id="tags-dropdown-btn-text">Select Tags ▾</span> </button> <!-- Tags Multi-Select Dropdown Menu --> <div id="tags-dropdown-menu" class="hidden absolute left-0 mt-2 w-72 max-h-72 overflow-y-auto origin-top-left rounded-xl bg-bg-surface border border-border shadow-xl p-2.5 z-50 space-y-1 animate-in fade-in zoom-in-95 duration-100"> <div class="px-2 py-1 text-[10px] font-mono font-bold uppercase tracking-wider text-fg-subtle border-b border-border-muted mb-1 flex items-center justify-between"> <span>Filter by Topics (Union)</span> <button type="button" id="clear-dropdown-tags-btn" class="text-accent hover:underline text-[10px]">Clear</button> </div> <div class="space-y-0.5" id="tag-dropdown-items-container"> <button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="agents"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#agents</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">3</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="architecture"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#architecture</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">2</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="asset-allocation"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#asset-allocation</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">2</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="culture"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#culture</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">2</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="investing"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#investing</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">2</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="leadership"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#leadership</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">2</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="management"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#management</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">2</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="temporal"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#temporal</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">2</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="aws"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#aws</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="career"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#career</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="distributed-systems"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#distributed-systems</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="etfs"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#etfs</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="financial-independence"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#financial-independence</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="github"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#github</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="kubernetes"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#kubernetes</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="mental-models"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#mental-models</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="personal-finance"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#personal-finance</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="platform-engineering"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#platform-engineering</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="sdlc"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#sdlc</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="strategy"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#strategy</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button><button type="button" class="tag-dropdown-item w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-bg-muted text-xs font-mono text-fg-muted hover:text-fg transition-colors flex items-center justify-between group" data-tag="systems-thinking"> <div class="flex items-center space-x-2"> <span class="tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px] text-accent"></span> <span>#systems-thinking</span> </div> <span class="text-[10px] text-fg-subtle bg-bg-muted group-hover:bg-bg-surface px-1 rounded">1</span> </button> </div> </div> </div> <!-- Active Tag Chips Container (Union of selected tags) --> <div id="active-tags-chips-container" class="flex flex-wrap items-center gap-1.5"> <!-- Chips injected dynamically --> </div> <!-- Results Counter --> <span id="results-count-text" class="text-fg-subtle text-[11px] hidden sm:inline ml-1">
+Showing all 8 articles
+</span> <!-- Reset All Filters --> <button type="button" id="reset-all-btn" class="hidden text-accent hover:underline font-semibold text-xs ml-1">
+Reset all
+</button> </div> <!-- Right: Sort Dropdown & View Mode Switcher --> <div class="flex items-center space-x-2.5 ml-auto flex-shrink-0"> <!-- Sort Dropdown --> <div class="flex items-center space-x-1" id="sort-container"> <span class="text-fg-subtle text-[11px]">Sort:</span> <select id="sort-select" class="bg-bg-surface border border-border text-fg text-xs font-mono rounded-md px-2 py-1 focus:outline-none focus:ring-1 focus:ring-accent"> <option value="newest">Newest</option> <option value="oldest">Oldest</option> <option value="reading-asc">Shortest read</option> <option value="reading-desc">Longest read</option> <option value="title-asc">Title (A–Z)</option> </select> </div> <!-- View Mode Toggle (Cards vs. Compact Rows, active in Articles mode) --> <div class="inline-flex items-center border border-border rounded-lg bg-bg-surface p-0.5" id="view-mode-container"> <button type="button" id="view-cards-btn" class="p-1 rounded text-fg bg-bg-muted transition-colors" title="Card Grid View" aria-label="Card Grid View"> <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect width="7" height="7" x="3" y="3" rx="1"></rect> <rect width="7" height="7" x="14" y="3" rx="1"></rect> <rect width="7" height="7" x="14" y="14" rx="1"></rect> <rect width="7" height="7" x="3" y="14" rx="1"></rect> </svg> </button> <button type="button" id="view-compact-btn" class="p-1 rounded text-fg-muted hover:text-fg transition-colors" title="Compact Matrix View" aria-label="Compact Matrix View"> <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <line x1="3" x2="21" y1="6" y2="6"></line> <line x1="3" x2="21" y1="12" y2="12"></line> <line x1="3" x2="21" y1="18" y2="18"></line> </svg> </button> </div> </div> </div> </div> <!-- ============================================== --> <!-- DYNAMIC RESULTS DISPLAY CONTAINER --> <!-- ============================================== --> <div id="results-display-container" class="min-h-[400px]"> <!-- Content injected dynamically via client engine below --> </div> </div>  </main> <footer class="mt-auto border-t border-border bg-bg-surface/50 transition-colors"> <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16"> <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12"> <!-- About / Statement column --> <div class="md:col-span-2 space-y-4"> <a href="/" class="font-serif text-xl font-bold tracking-tight text-fg hover:text-accent transition-colors">
+Fabrice Rivart
+</a> <p class="text-sm text-fg-muted leading-relaxed max-w-sm">
+A content-first personal publication and knowledge garden exploring durable software systems, engineering management, disciplined investing, and clear thinking.
+</p> <div class="pt-3 flex items-center space-x-3 text-fg-muted"> <a href="https://www.linkedin.com/in/frivart/" target="_blank" rel="noopener noreferrer" class="p-2 bg-bg-muted hover:bg-bg-subtle text-fg-muted hover:text-fg rounded-lg border border-border transition-colors" aria-label="LinkedIn Profile" title="LinkedIn Profile"> <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"> <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"></path> </svg> </a> </div> </div> <!-- Links columns --> <div class="space-y-3"> <h3 class="text-xs font-mono font-semibold uppercase tracking-wider text-fg-subtle"> Categories </h3> <ul class="space-y-2 text-sm"> <li> <a href="/engineering/" class="text-fg-muted hover:text-fg transition-colors"> Engineering </a> </li><li> <a href="/management/" class="text-fg-muted hover:text-fg transition-colors"> Management </a> </li><li> <a href="/investment/" class="text-fg-muted hover:text-fg transition-colors"> Investment </a> </li> </ul> </div><div class="space-y-3"> <h3 class="text-xs font-mono font-semibold uppercase tracking-wider text-fg-subtle"> Discover </h3> <ul class="space-y-2 text-sm"> <li> <a href="/search/" class="text-fg-muted hover:text-fg transition-colors"> Knowledge &amp; Search </a> </li><li> <a href="/paths/" class="text-fg-muted hover:text-fg transition-colors"> Reading Paths </a> </li><li> <a href="/tags/" class="text-fg-muted hover:text-fg transition-colors"> Topics &amp; Tags </a> </li><li> <a href="/about/" class="text-fg-muted hover:text-fg transition-colors"> About Fabrice </a> </li> </ul> </div><div class="space-y-3"> <h3 class="text-xs font-mono font-semibold uppercase tracking-wider text-fg-subtle"> Feeds &amp; System </h3> <ul class="space-y-2 text-sm"> <li> <a href="/rss.xml" class="text-fg-muted hover:text-fg transition-colors"> RSS Feed </a> </li><li> <a href="/sitemap.xml" class="text-fg-muted hover:text-fg transition-colors"> Sitemap </a> </li> </ul> </div> </div> <div class="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between text-xs text-fg-subtle gap-4"> <p>© 2026 Fabrice Rivart. All rights reserved.</p> <p class="text-right">
+Designed for reading, performance, and long-term durability.
+</p> </div> </div> </footer> </body></html> <script>(function(){const articlesData = [{"title":"Platform Engineering in the Era of Autonomous Agents","description":"Internal Developer Platforms must now cater to two distinct clients: human engineers and autonomous coding agents. Here is how platform APIs are evolving.","url":"/articles/platform-engineering-agent-era/","category":"engineering","topics":["Platform Engineering","Cloud","Architecture"],"tags":["platform-engineering","Kubernetes","AWS","agents"],"pubDate":"Aug 25, 2026","rawDate":"2026-08-25T00:00:00.000Z","readingTime":8,"featured":false},{"title":"Designing Durable AI Agent Workflows with Temporal","description":"Why agentic systems fail in production without state durability, and how workflow orchestration solves non-determinism, timeouts, and human-in-the-loop approvals.","url":"/articles/durable-agent-workflows/","category":"engineering","topics":["AI & Agents","Architecture","Cloud"],"tags":["Temporal","agents","architecture","distributed-systems"],"pubDate":"Aug 22, 2026","rawDate":"2026-08-22T00:00:00.000Z","readingTime":11,"featured":false},{"title":"The AI-Native Software Development Loop","description":"How software development transforms when autonomous AI agents participate directly in specification, implementation, testing, and continuous delivery loops.","url":"/articles/ai-native-sdlc/","category":"engineering","topics":["AI & Agents","Software Engineering","Architecture"],"tags":["agents","SDLC","GitHub","Temporal","architecture"],"pubDate":"Aug 20, 2026","rawDate":"2026-08-20T00:00:00.000Z","readingTime":9,"featured":true},{"title":"Building High-Trust, High-Accountability Teams","description":"Trust is not the absence of verification; it is the clarity of shared expectations, blameless postmortems, and psychological safety.","url":"/articles/high-trust-engineering-culture/","category":"management","topics":["Leadership","Organisations"],"tags":["leadership","culture","management"],"pubDate":"Aug 18, 2026","rawDate":"2026-08-18T00:00:00.000Z","readingTime":8,"featured":false},{"title":"The Principles of High-Leverage Engineering Management","description":"Moving past tactical task delegation to create high-autonomy teams, clear decision frameworks, and enduring engineering culture.","url":"/articles/engineering-management-leverage/","category":"management","topics":["Engineering Management","Leadership"],"tags":["management","leadership","culture","career"],"pubDate":"Aug 15, 2026","rawDate":"2026-08-15T00:00:00.000Z","readingTime":10,"featured":true},{"title":"The Mechanics of Financial Independence and Safe Withdrawal","description":"Understanding safe withdrawal rates, dynamic spending rules, sequence of returns risk, and capital preservation.","url":"/articles/financial-independence-mechanics/","category":"investment","topics":["Financial Independence","Personal Finance"],"tags":["financial-independence","investing","asset-allocation"],"pubDate":"Aug 12, 2026","rawDate":"2026-08-12T00:00:00.000Z","readingTime":10,"featured":false},{"title":"Building a Resilient Long-Term Investment System","description":"A disciplined framework for index investing, factor exposure, liquidity buffers, and psychological resilience across market cycles.","url":"/articles/long-term-investing-systems/","category":"investment","topics":["Investing","Personal Finance"],"tags":["investing","ETFs","personal-finance","asset-allocation"],"pubDate":"Aug 10, 2026","rawDate":"2026-08-10T00:00:00.000Z","readingTime":12,"featured":true},{"title":"Mental Models for Complex Systems and Decision Making","description":"How second-order thinking, inversion, feedback loops, and local vs. global optimization guide technical and strategic decisions.","url":"/articles/mental-models-for-systems/","category":"management","topics":["Technology","Life / Thinking"],"tags":["mental-models","systems-thinking","strategy"],"pubDate":"Aug 5, 2026","rawDate":"2026-08-05T00:00:00.000Z","readingTime":7,"featured":true}];
+const pathsData = [{"slug":"ai-engineering","title":"AI Engineering & Agentic Workflows","description":"A progressive roadmap from autonomous AI coding assistants to durable, production-grade agent orchestration.","category":"engineering","tags":["agents","architecture","sdlc","temporal","platform-engineering"],"featured":true,"url":"/paths/ai-engineering/","totalTime":28,"articles":[{"step":1,"title":"The AI-Native Software Development Loop","url":"/articles/ai-native-sdlc/","readingTime":9},{"step":2,"title":"Designing Durable AI Agent Workflows with Temporal","url":"/articles/durable-agent-workflows/","readingTime":11},{"step":3,"title":"Platform Engineering in the Era of Autonomous Agents","url":"/articles/platform-engineering-agent-era/","readingTime":8}]},{"slug":"disciplined-investing","title":"Disciplined Long-Term Investing","description":"A comprehensive progression from simple indexing strategies to dynamic asset allocation and safe withdrawal mechanics.","category":"investment","tags":["investing","asset-allocation","etfs","financial-independence","personal-finance"],"featured":true,"url":"/paths/disciplined-investing/","totalTime":22,"articles":[{"step":1,"title":"Building a Resilient Long-Term Investment System","url":"/articles/long-term-investing-systems/","readingTime":12},{"step":2,"title":"The Mechanics of Financial Independence and Safe Withdrawal","url":"/articles/financial-independence-mechanics/","readingTime":10}]},{"slug":"engineering-leadership","title":"Engineering Leadership & Team Architecture","description":"Foundational frameworks for building high-trust organizations, empowering senior talent, and scaling engineering impact.","category":"management","tags":["leadership","management","culture","strategy","systems-thinking"],"featured":true,"url":"/paths/engineering-leadership/","totalTime":18,"articles":[{"step":1,"title":"The Principles of High-Leverage Engineering Management","url":"/articles/engineering-management-leverage/","readingTime":10},{"step":2,"title":"Building High-Trust, High-Accountability Teams","url":"/articles/high-trust-engineering-culture/","readingTime":8}]}];
+const countsData = {"articles":{"all":8,"engineering":3,"management":3,"investment":2},"paths":{"all":3,"engineering":1,"management":1,"investment":1}};
+
+  (function () {
+    function setupKnowledgeHub() {
+      const searchInput = document.getElementById('search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+      const categoryBtns = document.querySelectorAll('.category-filter-btn');
+      const modeArticlesBtn = document.getElementById('mode-articles-btn');
+      const modePathsBtn = document.getElementById('mode-paths-btn');
+      const tagsDropdownContainer = document.getElementById('tags-dropdown-container');
+      const tagsDropdownBtn = document.getElementById('tags-dropdown-btn');
+      const tagsDropdownBtnText = document.getElementById('tags-dropdown-btn-text');
+      const tagsDropdownMenu = document.getElementById('tags-dropdown-menu');
+      const tagDropdownItems = document.querySelectorAll('.tag-dropdown-item');
+      const clearDropdownTagsBtn = document.getElementById('clear-dropdown-tags-btn');
+      const activeTagsChipsContainer = document.getElementById('active-tags-chips-container');
+      const resetAllBtn = document.getElementById('reset-all-btn');
+      const sortSelect = document.getElementById('sort-select');
+      const viewModeContainer = document.getElementById('view-mode-container');
+      const viewCardsBtn = document.getElementById('view-cards-btn');
+      const viewCompactBtn = document.getElementById('view-compact-btn');
+      const resultsCountText = document.getElementById('results-count-text');
+      const resultsContainer = document.getElementById('results-display-container');
+
+      const countAll = document.getElementById('cat-count-all');
+      const countEng = document.getElementById('cat-count-eng');
+      const countMgmt = document.getElementById('cat-count-mgmt');
+      const countInv = document.getElementById('cat-count-inv');
+
+      if (!searchInput || !resultsContainer) return;
+
+      // Active state (Supports Multi-Tag Array for Union across Articles and Paths)
+      const state = {
+        mode: localStorage.getItem('knowledge-active-mode') || 'articles', // 'articles' | 'paths'
+        query: '',
+        category: 'all',
+        tags: [], // array of selected tag strings
+        sort: 'newest',
+        view: localStorage.getItem('knowledge-view-mode') || 'cards', // 'cards' | 'compact'
+      };
+
+      // Read URL Query params
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('mode')) state.mode = urlParams.get('mode') || state.mode;
+      if (urlParams.get('q')) state.query = urlParams.get('q') || '';
+      if (urlParams.get('category')) state.category = urlParams.get('category') || 'all';
+      if (urlParams.get('tags')) {
+        state.tags = urlParams.get('tags').split(',').filter(Boolean);
+      } else if (urlParams.get('tag')) {
+        state.tags = [urlParams.get('tag')];
+      }
+      if (urlParams.get('sort')) state.sort = urlParams.get('sort') || 'newest';
+      if (urlParams.get('view')) state.view = urlParams.get('view') || state.view;
+
+      if (state.query && searchInput) searchInput.value = state.query;
+      if (state.sort && sortSelect) sortSelect.value = state.sort;
+
+      function updateUrl() {
+        const params = new URLSearchParams();
+        if (state.mode !== 'articles') params.set('mode', state.mode);
+        if (state.query) params.set('q', state.query);
+        if (state.category !== 'all') params.set('category', state.category);
+        if (state.tags.length > 0) params.set('tags', state.tags.join(','));
+        if (state.sort !== 'newest') params.set('sort', state.sort);
+        if (state.view !== 'cards') params.set('view', state.view);
+
+        const newUrl = params.toString()
+          ? `${window.location.pathname}?${params.toString()}`
+          : window.location.pathname;
+        window.history.replaceState({}, '', newUrl);
+      }
+
+      function getCategoryColorBadge(cat) {
+        switch (cat) {
+          case 'engineering':
+            return 'text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20';
+          case 'management':
+            return 'text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20';
+          case 'investment':
+            return 'text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/20';
+          default:
+            return 'text-fg-subtle bg-bg-muted border-border';
+        }
+      }
+
+      function toggleTag(tag) {
+        if (!tag) return;
+        const index = state.tags.indexOf(tag);
+        if (index > -1) {
+          state.tags.splice(index, 1);
+        } else {
+          state.tags.push(tag);
+        }
+        render();
+      }
+
+      function render() {
+        // 1. Update Mode Switcher Buttons UI
+        if (state.mode === 'articles') {
+          modeArticlesBtn?.classList.add('bg-accent', 'text-white', 'dark:text-zinc-950', 'shadow-sm', 'font-bold');
+          modeArticlesBtn?.classList.remove('text-fg-muted', 'font-medium');
+          modePathsBtn?.classList.remove('bg-accent', 'text-white', 'dark:text-zinc-950', 'shadow-sm', 'font-bold');
+          modePathsBtn?.classList.add('text-fg-muted', 'font-medium');
+
+          viewModeContainer?.classList.remove('hidden');
+          if (searchInput) searchInput.placeholder = 'Search keywords, concepts, systems... (/)';
+
+          if (countAll) countAll.textContent = `(${countsData.articles.all})`;
+          if (countEng) countEng.textContent = `(${countsData.articles.engineering})`;
+          if (countMgmt) countMgmt.textContent = `(${countsData.articles.management})`;
+          if (countInv) countInv.textContent = `(${countsData.articles.investment})`;
+        } else {
+          modePathsBtn?.classList.add('bg-accent', 'text-white', 'dark:text-zinc-950', 'shadow-sm', 'font-bold');
+          modePathsBtn?.classList.remove('text-fg-muted', 'font-medium');
+          modeArticlesBtn?.classList.remove('bg-accent', 'text-white', 'dark:text-zinc-950', 'shadow-sm', 'font-bold');
+          modeArticlesBtn?.classList.add('text-fg-muted', 'font-medium');
+
+          viewModeContainer?.classList.add('hidden');
+          if (searchInput) searchInput.placeholder = 'Search guided reading tracks... (/)';
+
+          if (countAll) countAll.textContent = `(${countsData.paths.all})`;
+          if (countEng) countEng.textContent = `(${countsData.paths.engineering})`;
+          if (countMgmt) countMgmt.textContent = `(${countsData.paths.management})`;
+          if (countInv) countInv.textContent = `(${countsData.paths.investment})`;
+        }
+
+        // Tags dropdown & active chips stay enabled in BOTH articles and paths mode
+        tagsDropdownContainer?.classList.remove('hidden');
+        activeTagsChipsContainer?.classList.remove('hidden');
+
+        // 2. Update Category Filter Buttons UI
+        categoryBtns.forEach((btn) => {
+          const cat = btn.getAttribute('data-category');
+          if (cat === state.category) {
+            btn.className = 'category-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium transition-all bg-accent text-white dark:text-zinc-950 shadow-sm whitespace-nowrap';
+          } else {
+            btn.className = 'category-filter-btn px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium text-fg-muted hover:text-fg bg-bg-surface hover:bg-bg-muted border border-border transition-all whitespace-nowrap';
+          }
+        });
+
+        // 3. Update Tag Dropdown Menu Checkboxes & Trigger Text
+        if (tagsDropdownBtnText) {
+          if (state.tags.length === 0) {
+            tagsDropdownBtnText.textContent = 'Select Tags ▾';
+            tagsDropdownBtn?.classList.remove('border-accent', 'text-accent', 'font-bold');
+          } else {
+            tagsDropdownBtnText.textContent = `Tags (${state.tags.length}) ▾`;
+            tagsDropdownBtn?.classList.add('border-accent', 'text-accent', 'font-bold');
+          }
+        }
+
+        tagDropdownItems.forEach((item) => {
+          const t = item.getAttribute('data-tag');
+          const checkbox = item.querySelector('.tag-checkbox');
+          const isSelected = t && state.tags.includes(t);
+          if (isSelected) {
+            item.classList.add('bg-accent/10', 'text-accent', 'font-bold');
+            item.classList.remove('text-fg-muted');
+            if (checkbox) {
+              checkbox.textContent = '✓';
+              checkbox.className = 'tag-checkbox w-3.5 h-3.5 rounded border border-accent bg-accent text-white dark:text-zinc-950 flex items-center justify-center text-[10px] font-bold';
+            }
+          } else {
+            item.classList.remove('bg-accent/10', 'text-accent', 'font-bold');
+            item.classList.add('text-fg-muted');
+            if (checkbox) {
+              checkbox.textContent = '';
+              checkbox.className = 'tag-checkbox w-3.5 h-3.5 rounded border border-border flex items-center justify-center text-[10px]';
+            }
+          }
+        });
+
+        // 4. Update Active Tag Dismissible Chips
+        if (activeTagsChipsContainer) {
+          if (state.tags.length > 0) {
+            activeTagsChipsContainer.innerHTML = state.tags
+              .map(
+                (t) => `
+                <div class="inline-flex items-center space-x-1 px-2 py-0.5 rounded-md bg-accent text-white dark:text-zinc-950 font-mono font-bold text-[11px] shadow-2xs">
+                  <span>#${t}</span>
+                  <button type="button" class="remove-single-tag-btn hover:opacity-80 p-0.5 ml-0.5" data-tag="${t}" title="Remove tag">✕</button>
+                </div>
+              `
+              )
+              .join('');
+
+            // Attach remove listeners
+            activeTagsChipsContainer.querySelectorAll('.remove-single-tag-btn').forEach((btn) => {
+              btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const t = btn.getAttribute('data-tag');
+                toggleTag(t);
+              });
+            });
+          } else {
+            activeTagsChipsContainer.innerHTML = '';
+          }
+        }
+
+        // 5. Update Clear Search Button
+        if (clearSearchBtn) {
+          if (state.query) clearSearchBtn.classList.remove('hidden');
+          else clearSearchBtn.classList.add('hidden');
+        }
+
+        // 6. Update Reset All Button
+        const hasFilters = state.query || state.category !== 'all' || state.tags.length > 0;
+        if (resetAllBtn) {
+          if (hasFilters) resetAllBtn.classList.remove('hidden');
+          else resetAllBtn.classList.add('hidden');
+        }
+
+        // 7. Update View Mode Buttons UI
+        if (state.view === 'cards') {
+          viewCardsBtn?.classList.add('bg-bg-muted', 'text-fg');
+          viewCardsBtn?.classList.remove('text-fg-muted');
+          viewCompactBtn?.classList.remove('bg-bg-muted', 'text-fg');
+          viewCompactBtn?.classList.add('text-fg-muted');
+        } else {
+          viewCompactBtn?.classList.add('bg-bg-muted', 'text-fg');
+          viewCompactBtn?.classList.remove('text-fg-muted');
+          viewCardsBtn?.classList.remove('bg-bg-muted', 'text-fg');
+          viewCardsBtn?.classList.add('text-fg-muted');
+        }
+
+        const hasActiveHighlight = state.tags.length > 0 || state.query || state.category !== 'all';
+
+        // ==============================================
+        // MODE A: ARTICLES RENDERING (UNION OF MULTI-TAGS)
+        // ==============================================
+        if (state.mode === 'articles') {
+          let filteredArticles = articlesData.filter((item) => {
+            // Category filter
+            if (state.category !== 'all' && item.category !== state.category) return false;
+
+            // Multi-tag UNION filter: article matches if ANY selected tag is in item.tags
+            if (state.tags.length > 0) {
+              const hasMatchingTag = item.tags.some((t) => state.tags.includes(t));
+              if (!hasMatchingTag) return false;
+            }
+
+            // Search query filter
+            if (state.query) {
+              const q = state.query.toLowerCase().trim();
+              const inTitle = item.title.toLowerCase().includes(q);
+              const inDesc = item.description.toLowerCase().includes(q);
+              const inCat = item.category.toLowerCase().includes(q);
+              const inTags = item.tags.some((t) => t.toLowerCase().includes(q));
+              const inTopics = item.topics.some((t) => t.toLowerCase().includes(q));
+              if (!inTitle && !inDesc && !inCat && !inTags && !inTopics) return false;
+            }
+            return true;
+          });
+
+          // Sort
+          filteredArticles.sort((a, b) => {
+            if (state.sort === 'newest') return new Date(b.rawDate).getTime() - new Date(a.rawDate).getTime();
+            if (state.sort === 'oldest') return new Date(a.rawDate).getTime() - new Date(b.rawDate).getTime();
+            if (state.sort === 'reading-asc') return (a.readingTime || 8) - (b.readingTime || 8);
+            if (state.sort === 'reading-desc') return (b.readingTime || 8) - (a.readingTime || 8);
+            if (state.sort === 'title-asc') return a.title.localeCompare(b.title);
+            return 0;
+          });
+
+          // Results counter
+          if (resultsCountText) {
+            if (filteredArticles.length === articlesData.length) {
+              resultsCountText.textContent = `Showing all ${articlesData.length} articles`;
+            } else {
+              resultsCountText.textContent = `Showing ${filteredArticles.length} of ${articlesData.length} articles`;
+            }
+          }
+
+          // Empty state
+          if (filteredArticles.length === 0) {
+            resultsContainer.innerHTML = `
+              <div class="p-12 text-center bg-bg-surface border border-border rounded-xl space-y-3">
+                <div class="w-10 h-10 mx-auto rounded-full bg-accent/10 flex items-center justify-center text-accent text-lg">🔍</div>
+                <p class="font-serif text-xl font-bold text-fg">No matching articles found</p>
+                <p class="text-xs text-fg-muted max-w-md mx-auto">
+                  No articles matched the active union filter. Try removing some tags or broadening your search query.
+                </p>
+                <div class="pt-2">
+                  <button type="button" id="empty-reset-btn" class="px-4 py-2 bg-accent text-white dark:text-zinc-950 text-xs font-mono font-bold rounded-lg hover:bg-accent-hover transition-colors">
+                    Reset All Filters
+                  </button>
+                </div>
+              </div>
+            `;
+            document.getElementById('empty-reset-btn')?.addEventListener('click', resetAll);
+            updateUrl();
+            return;
+          }
+
+          if (state.view === 'cards') {
+            // Card Grid View with Colored Tag & Tile Highlighting
+            resultsContainer.innerHTML = `
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 animate-in fade-in duration-150">
+                ${filteredArticles
+                  .map((item) => {
+                    const badgeClass = getCategoryColorBadge(item.category);
+                    const isCardHighlighted = hasActiveHighlight;
+
+                    return `
+                      <article class="p-5 sm:p-6 bg-bg-surface border ${
+                        isCardHighlighted ? 'border-accent/40 ring-1 ring-accent/20 bg-accent/3' : 'border-border'
+                      } rounded-xl hover:border-accent/60 transition-all flex flex-col justify-between space-y-3 group shadow-sm">
+                        <div class="space-y-2">
+                          <div class="flex items-center justify-between text-xs font-mono">
+                            <span class="uppercase tracking-wider font-bold px-2 py-0.5 rounded border text-[10px] ${badgeClass}">
+                              ${item.category}
+                            </span>
+                            <div class="flex items-center space-x-2 text-fg-subtle text-[11px]">
+                              <span>${item.pubDate}</span>
+                              <span>•</span>
+                              <span>${item.readingTime}m read</span>
+                            </div>
+                          </div>
+
+                          <h3 class="font-serif text-lg sm:text-xl font-bold text-fg group-hover:text-accent transition-colors leading-snug">
+                            <a href="${item.url}" class="block focus:outline-none focus:underline">${item.title}</a>
+                          </h3>
+
+                          <p class="text-xs sm:text-sm text-fg-muted font-serif leading-relaxed line-clamp-2">
+                            ${item.description}
+                          </p>
+                        </div>
+
+                        <div class="pt-3 border-t border-border-muted flex flex-wrap gap-1.5 items-center justify-between text-xs">
+                          <div class="flex flex-wrap gap-1">
+                            ${item.tags
+                              .map((t) => {
+                                const isTagSelected = state.tags.includes(t);
+                                return `
+                                  <button
+                                    type="button"
+                                    class="article-inline-tag text-[10px] font-mono rounded px-2 py-0.5 transition-all ${
+                                      isTagSelected
+                                        ? 'bg-accent text-white dark:text-zinc-950 font-bold border border-accent shadow-2xs'
+                                        : 'bg-bg-muted text-fg-subtle hover:bg-bg-subtle hover:text-fg'
+                                    }"
+                                    data-tag="${t}"
+                                    title="${isTagSelected ? 'Click to remove tag filter' : 'Click to filter by #' + t}"
+                                  >
+                                    ${isTagSelected ? '✓ ' : ''}#${t}
+                                  </button>
+                                `;
+                              })
+                              .join('')}
+                          </div>
+
+                          <a href="${item.url}" class="text-xs font-mono text-accent font-semibold group-hover:underline flex items-center space-x-1 ml-auto">
+                            <span>Read</span>
+                            <span>→</span>
+                          </a>
+                        </div>
+                      </article>
+                    `;
+                  })
+                  .join('')}
+              </div>
+            `;
+          } else {
+            // Compact Matrix View with Highlighting
+            resultsContainer.innerHTML = `
+              <div class="bg-bg-surface border border-border rounded-xl divide-y divide-border overflow-hidden shadow-sm animate-in fade-in duration-150">
+                ${filteredArticles
+                  .map((item) => {
+                    const badgeClass = getCategoryColorBadge(item.category);
+                    const isRowHighlighted = hasActiveHighlight;
+
+                    return `
+                      <div class="p-3.5 sm:p-4 ${
+                        isRowHighlighted ? 'bg-accent/3 hover:bg-accent/8' : 'hover:bg-bg-muted/60'
+                      } transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 group">
+                        <div class="flex items-center space-x-3 min-w-0 flex-1">
+                          <span class="uppercase tracking-wider font-bold px-2 py-0.5 rounded border text-[10px] font-mono ${badgeClass} flex-shrink-0">
+                            ${item.category}
+                          </span>
+                          <a href="${item.url}" class="font-serif text-sm sm:text-base font-bold text-fg group-hover:text-accent transition-colors truncate">
+                            ${item.title}
+                          </a>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-xs font-mono text-fg-subtle flex-shrink-0 self-end sm:self-auto">
+                          <div class="hidden lg:flex items-center space-x-1">
+                            ${item.tags.slice(0, 3).map((t) => {
+                              const isTagSelected = state.tags.includes(t);
+                              return `
+                                <button
+                                  type="button"
+                                  class="article-inline-tag text-[10px] px-1.5 py-0.5 rounded transition-all ${
+                                    isTagSelected
+                                      ? 'bg-accent text-white dark:text-zinc-950 font-bold border border-accent shadow-2xs'
+                                      : 'text-fg-subtle bg-bg-muted hover:text-fg'
+                                  }"
+                                  data-tag="${t}"
+                                >
+                                  ${isTagSelected ? '✓ ' : ''}#${t}
+                                </button>
+                              `;
+                            }).join('')}
+                          </div>
+                          <span class="text-[11px]">${item.pubDate}</span>
+                          <span>•</span>
+                          <span class="text-accent font-semibold">${item.readingTime}m</span>
+                          <a href="${item.url}" class="text-accent hover:underline hidden sm:inline-block">→</a>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join('')}
+              </div>
+            `;
+          }
+
+          // Attach click listeners to tags on cards/rows
+          document.querySelectorAll('.article-inline-tag').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              const tag = btn.getAttribute('data-tag');
+              toggleTag(tag);
+            });
+          });
+        }
+
+        // ==============================================
+        // MODE B: GUIDED PATHS RENDERING (WITH TAGS & HIGHLIGHTING)
+        // ==============================================
+        if (state.mode === 'paths') {
+          let filteredPaths = pathsData.filter((p) => {
+            if (state.category !== 'all' && p.category !== state.category) return false;
+
+            // Multi-tag union filter for guided paths
+            if (state.tags.length > 0) {
+              const hasMatchingTag = p.tags && p.tags.some((t) => state.tags.includes(t));
+              if (!hasMatchingTag) return false;
+            }
+
+            if (state.query) {
+              const q = state.query.toLowerCase().trim();
+              const inTitle = p.title.toLowerCase().includes(q);
+              const inDesc = p.description.toLowerCase().includes(q);
+              const inCat = p.category.toLowerCase().includes(q);
+              const inArts = p.articles.some((a) => a.title.toLowerCase().includes(q));
+              const inTags = p.tags && p.tags.some((t) => t.toLowerCase().includes(q));
+              if (!inTitle && !inDesc && !inCat && !inArts && !inTags) return false;
+            }
+            return true;
+          });
+
+          // Results counter
+          if (resultsCountText) {
+            if (filteredPaths.length === pathsData.length) {
+              resultsCountText.textContent = `Showing all ${pathsData.length} guided tracks`;
+            } else {
+              resultsCountText.textContent = `Showing ${filteredPaths.length} of ${pathsData.length} guided tracks`;
+            }
+          }
+
+          // Empty state
+          if (filteredPaths.length === 0) {
+            resultsContainer.innerHTML = `
+              <div class="p-12 text-center bg-bg-surface border border-border rounded-xl space-y-3">
+                <div class="w-10 h-10 mx-auto rounded-full bg-accent/10 flex items-center justify-center text-accent text-lg">🗺️</div>
+                <p class="font-serif text-xl font-bold text-fg">No matching guided tracks found</p>
+                <p class="text-xs text-fg-muted max-w-md mx-auto">
+                  No reading paths matched your active tag or search criteria. Try removing tags or selecting another pillar.
+                </p>
+                <div class="pt-2">
+                  <button type="button" id="empty-reset-paths-btn" class="px-4 py-2 bg-accent text-white dark:text-zinc-950 text-xs font-mono font-bold rounded-lg hover:bg-accent-hover transition-colors">
+                    Reset All Filters
+                  </button>
+                </div>
+              </div>
+            `;
+            document.getElementById('empty-reset-paths-btn')?.addEventListener('click', resetAll);
+            updateUrl();
+            return;
+          }
+
+          // Paths Grid with Highlighting & Interactive Tags
+          resultsContainer.innerHTML = `
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-in fade-in duration-150">
+              ${filteredPaths
+                .map((p) => {
+                  const badgeClass = getCategoryColorBadge(p.category);
+                  const isHighlighted = hasActiveHighlight;
+
+                  return `
+                    <div class="p-6 bg-bg-surface border ${
+                      isHighlighted ? 'border-accent/40 ring-1 ring-accent/20 bg-accent/3' : 'border-border'
+                    } rounded-xl hover:border-accent/60 transition-all flex flex-col justify-between space-y-5 group shadow-sm">
+                      <div class="space-y-3">
+                        <div class="flex items-center justify-between text-xs font-mono">
+                          <span class="uppercase tracking-wider font-bold px-2 py-0.5 rounded border text-[10px] ${badgeClass}">
+                            ${p.category}
+                          </span>
+                          <span class="text-fg-subtle text-[11px] font-semibold">
+                            ${p.articles.length} articles • ${p.totalTime}m total
+                          </span>
+                        </div>
+
+                        <h3 class="font-serif text-xl font-bold text-fg group-hover:text-accent transition-colors leading-snug">
+                          <a href="${p.url}">${p.title}</a>
+                        </h3>
+
+                        <p class="text-xs sm:text-sm text-fg-muted font-serif leading-relaxed line-clamp-3">
+                          ${p.description}
+                        </p>
+
+                        <!-- Topic Tags for Guided Path -->
+                        ${
+                          p.tags && p.tags.length > 0
+                            ? `
+                          <div class="flex flex-wrap gap-1 pt-1">
+                            ${p.tags
+                              .map((t) => {
+                                const isTagSelected = state.tags.includes(t);
+                                return `
+                                  <button
+                                    type="button"
+                                    class="path-inline-tag text-[10px] font-mono rounded px-2 py-0.5 transition-all ${
+                                      isTagSelected
+                                        ? 'bg-accent text-white dark:text-zinc-950 font-bold border border-accent shadow-2xs'
+                                        : 'bg-bg-muted text-fg-subtle hover:bg-bg-subtle hover:text-fg'
+                                    }"
+                                    data-tag="${t}"
+                                    title="${isTagSelected ? 'Click to remove tag' : 'Click to filter by #' + t}"
+                                  >
+                                    ${isTagSelected ? '✓ ' : ''}#${t}
+                                  </button>
+                                `;
+                              })
+                              .join('')}
+                          </div>
+                        `
+                            : ''
+                        }
+
+                        <!-- Sequential Article Stepper Timeline -->
+                        <div class="pt-3 border-t border-border-muted space-y-2">
+                          <div class="text-[10px] font-mono uppercase font-bold text-fg-subtle">
+                            Curated Sequence:
+                          </div>
+                          <div class="space-y-1.5 pl-2 border-l border-border">
+                            ${p.articles
+                              .map(
+                                (art) => `
+                              <a href="${art.url}" class="block text-xs font-serif text-fg-muted hover:text-accent transition-colors truncate">
+                                <span class="font-mono text-[10px] text-accent font-semibold mr-1">${art.step}.</span>
+                                <span>${art.title}</span>
+                              </a>
+                            `
+                              )
+                              .join('')}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="pt-4 border-t border-border-muted flex items-center justify-between">
+                        <a href="${p.url}" class="w-full py-2 px-3 text-center bg-accent text-white dark:text-zinc-950 hover:bg-accent-hover font-mono text-xs font-bold rounded-lg transition-colors shadow-sm">
+                          Start Guided Track →
+                        </a>
+                      </div>
+                    </div>
+                  `;
+                })
+                .join('')}
+            </div>
+          `;
+
+          // Attach click listeners to tags on path cards
+          document.querySelectorAll('.path-inline-tag').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              const tag = btn.getAttribute('data-tag');
+              toggleTag(tag);
+            });
+          });
+        }
+
+        updateUrl();
+      }
+
+      function resetAll() {
+        state.query = '';
+        state.category = 'all';
+        state.tags = [];
+        if (searchInput) searchInput.value = '';
+        render();
+      }
+
+      // Event Listeners for Mode Toggle
+      if (modeArticlesBtn && modePathsBtn) {
+        modeArticlesBtn.addEventListener('click', () => {
+          state.mode = 'articles';
+          localStorage.setItem('knowledge-active-mode', 'articles');
+          render();
+        });
+
+        modePathsBtn.addEventListener('click', () => {
+          state.mode = 'paths';
+          localStorage.setItem('knowledge-active-mode', 'paths');
+          render();
+        });
+      }
+
+      // Search input
+      searchInput.addEventListener('input', (e) => {
+        state.query = e.target.value;
+        render();
+      });
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          state.query = '';
+          searchInput.value = '';
+          searchInput.focus();
+          render();
+        });
+      }
+
+      // Pillar pills
+      categoryBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-category');
+          state.category = cat || 'all';
+          render();
+        });
+      });
+
+      // Multi-Tag dropdown toggle & item selection
+      if (tagsDropdownBtn && tagsDropdownMenu) {
+        tagsDropdownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          tagsDropdownMenu.classList.toggle('hidden');
+        });
+
+        tagDropdownItems.forEach((item) => {
+          item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const tag = item.getAttribute('data-tag');
+            toggleTag(tag);
+          });
+        });
+
+        if (clearDropdownTagsBtn) {
+          clearDropdownTagsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            state.tags = [];
+            render();
+          });
+        }
+
+        document.addEventListener('click', (e) => {
+          if (!tagsDropdownMenu.contains(e.target) && e.target !== tagsDropdownBtn) {
+            tagsDropdownMenu.classList.add('hidden');
+          }
+        });
+      }
+
+      if (resetAllBtn) {
+        resetAllBtn.addEventListener('click', resetAll);
+      }
+
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          state.sort = e.target.value;
+          render();
+        });
+      }
+
+      // View mode buttons
+      if (viewCardsBtn && viewCompactBtn) {
+        viewCardsBtn.addEventListener('click', () => {
+          state.view = 'cards';
+          localStorage.setItem('knowledge-view-mode', 'cards');
+          render();
+        });
+        viewCompactBtn.addEventListener('click', () => {
+          state.view = 'compact';
+          localStorage.setItem('knowledge-view-mode', 'compact');
+          render();
+        });
+      }
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+          if (document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
+            e.preventDefault();
+            searchInput.focus();
+          }
+        }
+        if (e.key === 'Escape') {
+          if (tagsDropdownMenu && !tagsDropdownMenu.classList.contains('hidden')) {
+            tagsDropdownMenu.classList.add('hidden');
+          } else if (document.activeElement === searchInput) {
+            if (searchInput.value) {
+              state.query = '';
+              searchInput.value = '';
+              render();
+            } else {
+              searchInput.blur();
+            }
+          }
+        }
+      });
+
+      // Initial Render
+      render();
+    }
+
+    setupKnowledgeHub();
+    document.addEventListener('astro:after-swap', setupKnowledgeHub);
+  })();
+})();</script>
